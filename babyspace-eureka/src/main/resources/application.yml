@@ -42,6 +42,7 @@ eureka:
   client:
     registerWithEureka: false # 单点的时候设置为 false 禁止注册自身
     fetchRegistry: false
+
   server:
     enableSelfPreservation: true              #服务端开启自我保护模式。无论什么情况，服务端都会保持一定数量的服务。避免client与server的网络问题，而出现大量的服务被清除。
 #    evictionIntervalTimerInMs: 10000          #开启清除无效服务的定时任务，时间间隔。默认1分钟

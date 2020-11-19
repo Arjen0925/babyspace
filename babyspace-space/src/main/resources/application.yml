@@ -9,6 +9,6 @@ eureka:
     hostname: localhost
     appname: babyspace-space
 
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
