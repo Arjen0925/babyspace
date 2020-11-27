@@ -2,7 +2,7 @@ spring:
   application:
     name: space
 server:
-  port: 8888
+  port: 8088
 eureka:
   instance:
     #preferIpAddress: true
