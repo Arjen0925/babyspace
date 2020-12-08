@@ -1,8 +1,14 @@
 spring:
   application:
     name: babyspace-space
-server:
-  port: 8088
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: babyspace-config
+
+      profile: dev
+      label: master
 eureka:
   instance:
     #preferIpAddress: true
