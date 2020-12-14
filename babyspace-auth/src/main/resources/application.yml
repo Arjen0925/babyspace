@@ -3,11 +3,11 @@ spring:
     name: auth
 server:
   port: 8888
-eureka:
-  instance:
-    hostname: localhost
-    appname: babyspace-auth
-
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+#eureka:
+#  instance:
+#    hostname: localhost
+#    appname: babyspace-auth
+#
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka

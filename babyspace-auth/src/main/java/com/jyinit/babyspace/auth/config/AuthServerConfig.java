@@ -13,6 +13,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
  */
 @Configuration
 @EnableAuthorizationServer
+
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
@@ -27,13 +28,21 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("javaboy")
-                .secret(passwordEncoder.encode("123"))
-                .autoApprove(true)
-                .redirectUris("http://localhost:1112/login", "http://localhost:1113/login")
-                .scopes("user")
-                .accessTokenValiditySeconds(7200)
-                .authorizedGrantTypes("authorization_code");
+                    .withClient("space")
+                    .secret(passwordEncoder.encode("space1234"))
+                    .autoApprove(false)
+                    .redirectUris("http://localhost:8088/space/login")
+                    .scopes("app")
+                    .accessTokenValiditySeconds(7200)
+                    .authorizedGrantTypes("authorization_code")
+                .and()
+                    .withClient("client2")
+                    .secret(passwordEncoder.encode("test1234"))
+                    .autoApprove(false)
+                    .redirectUris("http://localhost:9999/test/login")
+                    .scopes("app")
+                    .accessTokenValiditySeconds(7200)
+                    .authorizedGrantTypes("authorization_code");
 
     }
 }
