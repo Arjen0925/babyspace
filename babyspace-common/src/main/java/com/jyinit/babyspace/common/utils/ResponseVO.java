@@ -11,11 +11,23 @@ import java.io.Serializable;
 
 public class ResponseVO<T> implements Serializable {
 
-    private String msg = StringUtils.EMPTY;
+    private String msg;
 
     private Integer code;
 
     private T data;
+
+    public T getData() {
+        return data;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
 
     public ResponseVO() {
         this.msg = SysConstant.MSG.SUCCESS;
