@@ -34,6 +34,13 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.jyinit.babyspace</groupId>
+            <artifactId>babyspace-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 

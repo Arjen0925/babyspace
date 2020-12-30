@@ -1,5 +1,6 @@
 package com.jyinit.babyspace.space.controller;
 
+import com.jyinit.babyspace.common.utils.ResponseVO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
     @GetMapping("/test")
-    public String test(){
+    public ResponseVO<String> test(){
 
-        return "This is a test!";
+        return ResponseVO.successInstance("this is ok");
     }
 }

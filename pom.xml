@@ -15,6 +15,7 @@
     <module>babyspace-config</module>
     <module>babyspace-eureka</module>
     <module>babyspace-auth</module>
+    <module>babyspace-common</module>
 
 </modules>
 
