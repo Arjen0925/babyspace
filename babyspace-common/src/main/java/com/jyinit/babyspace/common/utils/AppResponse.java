@@ -141,7 +141,7 @@ public class AppResponse<T> {
      *
      * @param <T>
      */
-    private static class AppResponseBuilder<T> {
+    public static class AppResponseBuilder<T> {
         /**
          * 返回值代码 由Status类定义
          *

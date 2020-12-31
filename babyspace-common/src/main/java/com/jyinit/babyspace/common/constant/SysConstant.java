@@ -8,17 +8,19 @@ import org.apache.http.HttpStatus;
  */
 public interface SysConstant {
 
-    class MSG {
+    class SYS_MSG {
         /**
          * 操作成功
          */
         public static final String SUCCESS = "SUCCESS";
 
-        public static String ERROR = "系统错误，请联系管理员";
+        public static final String ERROR = "ERROR";
     }
 
     class SYS_CODE {
-            public static final Integer SUCCESS_CODE = HttpStatus.SC_OK;
+        public static final String SUCCESS_CODE = "2000";
+
+        public static final String ERROR_CODE = "4000";
 
 
     }
