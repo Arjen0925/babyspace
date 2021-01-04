@@ -10,17 +10,35 @@ public class BSServiceException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
     private String message;
-    private int code = 500;
+    private String code = "5000";
 
-    public BSServiceException(String msg) {
-        this.message = msg;
+    public BSServiceException(String message) {
+        super(message);
+        this.message = message;
     }
 
-    public BSServiceException(String message, String msg, int code) {
+    public BSServiceException(String message, String code) {
         super(message);
-        this.message = msg;
+        this.message = message;
+        this.code = code;
+    }
+    public BSServiceException(String message, Throwable cause) {
+        super(message, cause);
+        this.message = message;
+    }
+
+    public BSServiceException(Throwable cause, String message, String code) {
+        super(cause);
+        this.message = message;
         this.code = code;
     }
 
+    @Override
+    public String getMessage() {
+        return message;
+    }
 
+    public String getCode() {
+        return code;
+    }
 }
