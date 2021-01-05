@@ -1,8 +1,5 @@
 package com.jyinit.babyspace.common.constant;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpStatus;
-
 /**
  * @author AJ ajin0369@outlook.com
  */
@@ -20,7 +17,7 @@ public interface SysConstant {
     class SYS_CODE {
         public static final String SUCCESS_CODE = "2000";
 
-        public static final String ERROR_CODE = "4000";
+        public static final String ERROR_CODE = "5000";
 
 
     }
