@@ -1,5 +1,7 @@
 package com.jyinit.babyspace.common.pojo;
 
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -9,18 +11,25 @@ import java.util.Objects;
  */
 public class BaseDO implements Serializable {
 
+
     private static final long serialVersionUID = 6140619445375817208L;
 
+    @TableId(type= IdType.AUTO)
     private Long id;
 
+    @TableField(value = "create_time",fill= FieldFill.INSERT)
     private LocalDateTime createTime;
 
+    @TableField(value = "update_time",fill= FieldFill.UPDATE)
     private LocalDateTime updateTime;
 
+    @TableField(value = "create_user",fill= FieldFill.INSERT)
     private String createUser;
 
+    @TableField(value = "update_user",fill= FieldFill.UPDATE)
     private String updateUser;
 
+    @TableLogic
     private Boolean isDelete;
 
 
