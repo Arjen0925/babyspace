@@ -26,21 +26,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        web.ignoring().antMatchers("/login.html", "/css/**", "/js/**", "/images/**");
 //    }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.requestMatchers()
-//                .antMatchers("/login")
-//                .antMatchers("/oauth/authorize")
-//                .and()
-//                .authorizeRequests().anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login.html")
-//                .loginProcessingUrl("/login")
-//                .permitAll()
-//                .and()
-//                .csrf().disable();
-//    }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/member/*").permitAll().
+                anyRequest().authenticated();
+    }
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()

@@ -1,6 +1,11 @@
 spring:
   application:
     name: auth
+  datasource:
+    url: jdbc:mysql://139.224.43.122:3306/babyspace?useUnicode=true&characterEncoding=utf8
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root1234
 server:
   port: 8888
 #eureka:
@@ -11,3 +16,14 @@ server:
 #  client:
 #    serviceUrl:
 #      defaultZone: http://localhost:8761/eureka
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+

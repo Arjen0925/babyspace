@@ -11,8 +11,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 /**
  * @author AJin ajin0369@outlook.com
  */
-@Configuration
-@EnableAuthorizationServer
+//@Configuration
+//@EnableAuthorizationServer
 
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 

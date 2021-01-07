@@ -20,16 +20,17 @@ public class BaseDO implements Serializable {
     @TableField(value = "create_time",fill= FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    @TableField(value = "update_time",fill= FieldFill.UPDATE)
+    @TableField(value = "update_time",fill= FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
     @TableField(value = "create_user",fill= FieldFill.INSERT)
     private String createUser;
 
-    @TableField(value = "update_user",fill= FieldFill.UPDATE)
+    @TableField(value = "update_user",fill= FieldFill.INSERT_UPDATE)
     private String updateUser;
 
     @TableLogic
+    @TableField(value = "is_delete",fill = FieldFill.INSERT)
     private Boolean isDelete;
 
 
